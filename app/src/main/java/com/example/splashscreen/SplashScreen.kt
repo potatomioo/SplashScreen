@@ -1,5 +1,8 @@
 package com.example.splashscreen
 
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
@@ -35,7 +38,8 @@ fun splash(
     val animatedstate = animateFloatAsState(
         targetValue = if(isActive) 1f else 0f,
         animationSpec = tween(
-            durationMillis = 5000
+            durationMillis = 3000,
+            easing = LinearEasing
         )
     )
     
